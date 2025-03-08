@@ -1,0 +1,64 @@
+@use 'variables' as *;
+@use 'sass:map';
+
+// Typography Mixins
+@mixin text-preset-1 {
+  font-family: $font-family-base;
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+  letter-spacing: $letter-spacing-default;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-preset-2 {
+  font-family: $font-family-base;
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  letter-spacing: $letter-spacing-default;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-preset-3 {
+  font-family: $font-family-base;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  letter-spacing: $letter-spacing-default;
+  font-weight: $font-weight-semibold;
+}
+
+@mixin text-preset-4 {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  letter-spacing: $letter-spacing-default;
+  font-weight: $font-weight-regular;
+}
+
+@mixin text-preset-4-bold {
+  font-family: $font-family-base;
+  font-size: $font-size-sm;
+  line-height: $line-height-sm;
+  letter-spacing: $letter-spacing-default;
+  font-weight: $font-weight-semibold;
+}
+
+// Utility Classes
+.text-preset-1 {
+  @include text-preset-1;
+}
+
+.text-preset-2 {
+  @include text-preset-2;
+}
+
+.text-preset-3 {
+  @include text-preset-3;
+}
+
+.text-preset-4 {
+  @include text-preset-4;
+}
+
+.text-preset-4-bold {
+  @include text-preset-4-bold;
+} 
