@@ -1,12 +1,16 @@
+@use '../design-system/colors' as colors;
+
 // Colors
-$color-primary: #007bff;
-$color-secondary: #6c757d;
+$color-primary: colors.$color-primary;
+$color-primary-dark: colors.$color-primary-dark;
+$color-primary-light: colors.$color-primary-light;
+$color-secondary: colors.$rose-300;
 $color-success: #28a745;
 $color-danger: #dc3545;
 $color-warning: #ffc107;
 $color-info: #17a2b8;
-$color-light: #f8f9fa;
-$color-dark: #343a40;
+$color-light: colors.$rose-50;
+$color-dark: colors.$rose-900;
 
 // Typography
 $font-family-base: 'Red Hat Text', sans-serif;
