@@ -1,5 +1,6 @@
 [
     {
+       "uuid": "1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6",
        "image": {
             "thumbnail": "/assets/images/image-waffle-thumbnail.jpg",
             "mobile": "/assets/images/image-waffle-mobile.jpg",
@@ -11,6 +12,7 @@
        "price": 6.50
     },
     {
+        "uuid": "2b3c4d5e-6f7g-8h9i-0j1k-l2m3n4o5p6q7",
         "image": {
             "thumbnail": "/assets/images/image-creme-brulee-thumbnail.jpg",
             "mobile": "/assets/images/image-creme-brulee-mobile.jpg",
@@ -22,6 +24,7 @@
         "price": 7.00
      },
      {
+        "uuid": "3c4d5e6f-7g8h-9i0j-k1l2-m3n4o5p6q7r8",
         "image": {
             "thumbnail": "/assets/images/image-macaron-thumbnail.jpg",
             "mobile": "/assets/images/image-macaron-mobile.jpg",
@@ -33,6 +36,7 @@
         "price": 8.00
      },
      {
+        "uuid": "4d5e6f7g-8h9i-0j1k-l2m3-n4o5p6q7r8s9",
         "image": {
             "thumbnail": "/assets/images/image-tiramisu-thumbnail.jpg",
             "mobile": "/assets/images/image-tiramisu-mobile.jpg",
@@ -44,6 +48,7 @@
         "price": 5.50
      },
      {
+        "uuid": "5e6f7g8h-9i0j-k1l2-m3n4-o5p6q7r8s9t0",
         "image": {
             "thumbnail": "/assets/images/image-baklava-thumbnail.jpg",
             "mobile": "/assets/images/image-baklava-mobile.jpg",
@@ -55,6 +60,7 @@
         "price": 4.00
      },
      {
+        "uuid": "6f7g8h9i-0j1k-l2m3-n4o5-p6q7r8s9t0u1",
         "image": {
             "thumbnail": "/assets/images/image-meringue-thumbnail.jpg",
             "mobile": "/assets/images/image-meringue-mobile.jpg",
@@ -66,6 +72,7 @@
         "price": 5.00
      },
      {
+        "uuid": "7g8h9i0j-k1l2-m3n4-o5p6-q7r8s9t0u1v2",
         "image": {
             "thumbnail": "/assets/images/image-cake-thumbnail.jpg",
             "mobile": "/assets/images/image-cake-mobile.jpg",
@@ -77,6 +84,7 @@
         "price": 4.50
      },
      {
+        "uuid": "8h9i0j1k-l2m3-n4o5-p6q7-r8s9t0u1v2w3",
         "image": {
             "thumbnail": "/assets/images/image-brownie-thumbnail.jpg",
             "mobile": "/assets/images/image-brownie-mobile.jpg",
@@ -88,6 +96,7 @@
         "price": 4.50
      },
      {
+        "uuid": "9i0j1k2l-m3n4-o5p6-q7r8-s9t0u1v2w3x4",
         "image": {
             "thumbnail": "/assets/images/image-panna-cotta-thumbnail.jpg",
             "mobile": "/assets/images/image-panna-cotta-mobile.jpg",

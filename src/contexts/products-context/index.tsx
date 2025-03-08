@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
-import { Product, ProductsContextType, ProductsProviderProps } from './types';
+import {
+  Product,
+  CartProduct,
+  ProductsContextType,
+  ProductsProviderProps,
+} from './types';
 import { ProductsContext } from './context';
 import productsData from '../../data/data.json';
 
 const ProductsProvider = ({ children }: ProductsProviderProps) => {
   const [products, setProducts] = useState<Product[]>([]);
+  const [cartProducts, setCartProducts] = useState<CartProduct[]>([]);
 
   useEffect(() => {
     setProducts(productsData);
@@ -12,7 +18,7 @@ const ProductsProvider = ({ children }: ProductsProviderProps) => {
 
   const contextVal: ProductsContextType = {
     products,
-    setProducts,
+    cartProducts,
   };
 
   return (

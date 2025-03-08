@@ -12,11 +12,18 @@ export interface Product {
   name: string;
   category: string;
   price: number;
+  uuid: string;
+}
+
+export interface CartProduct {
+  uuid: string;
+  quantity: number;
+  unitPrice: number;
 }
 
 export interface ProductsContextType {
   products: Product[];
-  setProducts: (products: Product[]) => void;
+  cartProducts: CartProduct[];
 }
 
 export interface ProductsProviderProps {
