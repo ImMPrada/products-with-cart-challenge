@@ -1,0 +1,66 @@
+// Rose Color Palette
+$rose-900: #260F08;  // Dark Rose
+$rose-500: #87635A;  // Medium Rose
+$rose-400: #AD8A85;  // Light Medium Rose
+$rose-300: #CAAFA7;  // Light Rose
+$rose-100: #F5EEEC;  // Very Light Rose
+$rose-50:  #FCF8F6;  // Lightest Rose
+
+// Red Color Palette
+$red-500: #C73B0F;  // Base Red
+
+// Green Color Palette
+$green-500: #1EA575;  // Base Green
+
+// Monochrome Color Palette
+$black: #000000;
+$white: #FFFFFF;
+
+// Color Intent Mapping
+$color-primary: $rose-500;
+$color-primary-dark: $rose-900;
+$color-primary-light: $rose-300;
+$color-background: $rose-50;
+$color-surface: $rose-100;
+$color-accent: $red-500;
+$color-success: $green-500;
+
+// Color Scale Maps
+$rose-scale: (
+  "900": $rose-900,
+  "500": $rose-500,
+  "400": $rose-400,
+  "300": $rose-300,
+  "100": $rose-100,
+  "50": $rose-50
+);
+
+$red-scale: (
+  "500": $red-500
+);
+
+$green-scale: (
+  "500": $green-500
+);
+
+$monochrome-scale: (
+  "black": $black,
+  "white": $white
+);
+
+// Functions to get colors from scales
+@function rose($shade) {
+  @return map-get($rose-scale, $shade);
+}
+
+@function red($shade) {
+  @return map-get($red-scale, $shade);
+}
+
+@function green($shade) {
+  @return map-get($green-scale, $shade);
+}
+
+@function monochrome($shade) {
+  @return map-get($monochrome-scale, $shade);
+} 
