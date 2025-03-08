@@ -1,9 +1,10 @@
 @use 'sass:color';
+@use '../abstracts' as *;
 
 .app {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: $spacing-md;
+  padding: $spacing-xl;
   text-align: center;
   background-color: $color-light;
   min-height: 100vh;
@@ -11,42 +12,56 @@
   flex-direction: column;
   align-items: center;
 
-  &__logo {
-    height: 6em;
-    padding: $spacing-lg;
-    will-change: filter;
-    transition: filter 300ms;
+  &__header {
+    margin-bottom: $spacing-lg;
+  }
+  
+  &__main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $spacing-md;
+  }
+  
+  &__footer {
+    margin-top: $spacing-xl;
+    padding: $spacing-md;
+    text-align: center;
+  }
 
-    &:hover {
-      filter: drop-shadow(0 0 2em rgba($color-primary, 0.6));
+  &__section {
+    margin-bottom: $spacing-xl * 2;
+    padding: $spacing-lg;
+    border-radius: 8px;
+    background-color: $color-light;
+    
+    &:not(:last-child) {
+      margin-bottom: $spacing-xl;
+    }
+    
+    h2 {
+      color: $color-primary;
+      margin-bottom: $spacing-lg;
     }
   }
 
-  &__logo-react:hover {
-    filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6));
-  }
-
   &__card {
-    padding: $spacing-xl;
+    padding: $spacing-lg;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba($color-dark, 0.1);
-    margin: $spacing-lg 0;
     
     button {
-      padding: $spacing-sm $spacing-lg;
-      font-size: 1em;
-      font-weight: 500;
       background-color: $color-primary;
       color: white;
       border: none;
+      padding: $spacing-sm $spacing-md;
       border-radius: 4px;
+      font-weight: $font-weight-semibold;
       cursor: pointer;
-      transition: background-color 0.3s;
-      margin-bottom: $spacing-md;
-
+      transition: background-color 0.2s ease;
+      
       &:hover {
-        background-color: color.adjust($color-primary, $lightness: -10%);
+        background-color: darken($color-primary, 10%);
       }
     }
 
@@ -62,5 +77,38 @@
     color: $color-secondary;
     margin-top: $spacing-lg;
     font-size: 0.9em;
+  }
+
+  &__links {
+    display: flex;
+    gap: $spacing-md;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+    
+    &:hover {
+      filter: drop-shadow(0 0 2em rgba($color-primary, 0.667));
+    }
+    
+    &-react:hover {
+      filter: drop-shadow(0 0 2em rgba($color-info, 0.667));
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: $breakpoint-md) {
+  .app {
+    padding: $spacing-md;
+    
+    &__section {
+      padding: $spacing-md;
+    }
   }
 } 
