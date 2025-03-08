@@ -1,21 +1,36 @@
 @use '../abstracts' as *;
 
-h1, h2, h3, h4, h5, h6 {
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-md;
+}
+
+h1, .h1 {
+  font-size: $font-size-xl;
+  line-height: $line-height-xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-lg;
+}
+
+h2, .h2 {
+  font-size: $font-size-lg;
+  line-height: $line-height-lg;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-md;
+}
+
+h3, .h3 {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-sm;
+}
+
+h4, h5, h6 {
   margin-bottom: $spacing-md;
   font-weight: 700;
   line-height: 1.2;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
 }
 
 h4 {

@@ -1,8 +1,6 @@
 @use '../abstracts' as *;
 
-*, 
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,7 +24,13 @@ img {
   height: auto;
 }
 
-button,
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
 input,
 optgroup,
 select,
