@@ -2,8 +2,7 @@
 @use 'abstracts' as *;
 
 // Base
-@use 'base/reset';
-@use 'base/typography';
+@use 'base';
 
 // Components
 @use 'components/app';
