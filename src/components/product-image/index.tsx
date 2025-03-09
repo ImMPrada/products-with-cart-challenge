@@ -18,6 +18,7 @@ export const ProductImage = ({
   desktop,
   name,
   isThumbnail,
+  isInCart,
 }: ProductImageProps) => {
   const { isMobile, isTablet } = useContext(MediaQueryContext);
 
@@ -30,7 +31,7 @@ export const ProductImage = ({
   }
 
   return (
-    <div className="product-image">
+    <div className={`product-image ${isInCart ? 'product-image--in-cart' : ''}`}>
       <img 
         src={getImage(isMobile, isTablet, mobile, tablet, desktop)} 
         alt={name}

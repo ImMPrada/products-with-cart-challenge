@@ -1,3 +1,5 @@
+import { Product } from "../../contexts/products-context/types";
+
 export interface Image {
   thumbnail: string;
   mobile: string;
@@ -6,8 +8,5 @@ export interface Image {
 }
 
 export interface ProductCardProps {
-  image: Image;
-  name: string;
-  category: string;
-  price: number;
+  product: Product;
 } 

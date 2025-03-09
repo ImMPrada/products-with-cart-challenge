@@ -13,7 +13,7 @@ function ProductsList() {
     <div className="">
       <h1>Products</h1>
       {products.map((product) => (
-        <ProductCard key={product.uuid} {...product} />
+        <ProductCard key={product.uuid} product={product} />
       ))}
     </div>
   )
