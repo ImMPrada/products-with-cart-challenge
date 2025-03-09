@@ -1,100 +1,72 @@
-# Product List with Cart
+# Frontend Mentor - Product list with cart solution
 
-This project is a product list application with cart functionality, built using React, TypeScript, and SASS following the BEM methodology.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Project Structure
+## Table of contents
 
-The project follows a modular architecture with a focus on maintainable and scalable styling using SASS and BEM methodology.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-## Styles Architecture
+## Overview
 
-We follow a hybrid approach for styling our application:
+### The challenge
 
-### Co-located Component Styles
+Users should be able to:
 
-Each component has its own styles file co-located within its directory:
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-```
-src/
-  components/
-    ProductCard/
-      ├── index.ts
-      ├── types.ts
-      ├── ProductCard.tsx
-      └── styles.scss      # Component-specific styles
-```
+### Screenshot
 
-This approach provides several benefits:
-- Better encapsulation of component styles
-- Improved maintainability and discoverability
-- Easier component portability
-- Clear ownership of styles
+![](./screenshots/desktop-empty-cart.png)
+![](./screenshots/desktop-cart-with-desserts.png)
 
-### Global Styles Organization
+### Links
 
-Global styles and shared resources are organized in the `styles/` directory:
+- Live Site URL: [Products with Cart Challenge](https://products-with-cart-challenge.vercel.app/)
 
-```
-src/
-  styles/
-    ├── abstracts/        # Variables, mixins, functions
-    ├── base/            # Reset, typography, base elements
-    ├── design-system/   # Design tokens, themes
-    ├── layouts/         # Layout-specific styles
-    └── themes/          # Theme configurations
-```
+## My process
 
-### Naming Convention
+### Built with
 
-We use BEM (Block Element Modifier) methodology for class naming:
+- [React](https://reactjs.org/) - JS library (v19)
+- [TypeScript](https://www.typescriptlang.org/) - For type safety
+- [Vite](https://vitejs.dev/) - Build tool
+- [SASS](https://sass-lang.com/) - For styles
+- Mobile-first workflow
+- React Context for state management
+- Responsive design principles
 
-```scss
-.block {
-  &__element {
-    // Element styles
-    
-    &--modifier {
-      // Modified element styles
-    }
-  }
-}
-```
+### What I learned
 
-### Style Imports
+One of the main challenges in this project was implementing the cart functionality, which required careful state management and proper handling of product quantities. The implementation of the context system for managing the shopping cart state across components was particularly interesting.
 
-Components import their styles directly:
+Key learnings include:
+- State management patterns in React
+- TypeScript implementation for complex state types
+- Component composition for reusable cart functionality
+- Responsive design implementation
 
-```typescript
-import './styles.scss';
-```
+### Continued development
 
-Global styles and utilities can be imported using the @use rule:
+Areas I plan to focus on in future projects:
+- Advanced state management patterns
+- Performance optimization in React applications
+- Enhanced TypeScript usage
+- Improved accessibility features
 
-```scss
-@use '@/styles/abstracts' as *;
-```
+## Author
 
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-## Available Scripts
-
-- `npm run dev` - Runs the app in development mode
-- `npm run build` - Builds the app for production
-- `npm run preview` - Previews the production build locally
-
-## Technologies Used
-
-- React
-- TypeScript
-- SASS
-- Vite
+- LinkedIn - [Miguel Prada](https://www.linkedin.com/in/immprada/)
+- Twitter - [@im_mprada](https://x.com/im_mprada)
