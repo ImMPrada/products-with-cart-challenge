@@ -49,6 +49,30 @@
     }
   }
 
+  &__notice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: colors.$rose-50;
+    padding: 16px;
+    border-radius: 16px;
+
+    p {
+      @include text-preset-4;
+      color: colors.$rose-900;
+    }
+  }
+
+  &__button {
+    @include text-preset-3;
+    width: 100%;
+    background-color: colors.$red;
+    color: colors.$white;
+    padding: 16px;
+    border-radius: 32px;
+  }
+
   @media (max-width: $breakpoint-lg) {
     min-width: 95%;
   }
