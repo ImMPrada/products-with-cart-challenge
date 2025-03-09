@@ -1,0 +1,18 @@
+@use '../../styles/design-system/colors' as colors;
+@use '../../styles/design-system/typography' as *;
+
+.add-to-cart-button {
+  width: 100%;
+
+  &__button {
+    @include text-preset-4;
+
+    border-radius: 24px;
+    background-color: colors.$white;
+    border: 1px solid colors.$rose-400;
+    color: colors.$rose-900;
+    padding: 12px 24px;
+
+    
+  }
+}

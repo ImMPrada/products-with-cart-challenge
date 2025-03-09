@@ -1,17 +1,22 @@
-import React from 'react';
-
 import { type ProductCardProps } from './types';
 import './styles.scss';
 import ProductImage from '../product-image';
+import { AddToCartButton } from '../add-to-card-button';
 
 export const ProductCard = ({ image, name, category, price }: ProductCardProps) => {
   return (
     <div className="product-card">
-      <ProductImage
-        {...image}
-        name={name}
-        isThumbnail={false}
-      />
+      <div className="product-card__header">
+        <ProductImage
+          {...image}
+          name={name}
+          isThumbnail={false}
+        />
+
+        <AddToCartButton
+          title="Add to Cart"
+        />
+      </div>
 
       <div className="product-card__content">
         <p className="product-card__content__category">{category}</p>
