@@ -1,6 +1,6 @@
 import { MediaQueryProvider } from './contexts/media-query-context';
-import ProductsList from './components/products-list';
 import { ProductsProvider } from './contexts/products-context';
+import Desserts from './pages/desserts';
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <div className="app">
       <MediaQueryProvider>
         <ProductsProvider>
-          <ProductsList />
+          <Desserts />
         </ProductsProvider>
       </MediaQueryProvider>
     </div>

@@ -1,0 +1,20 @@
+@use '../../styles/design-system/colors' as colors;
+@use '../../styles/design-system/typography' as *;
+@use '../../styles/abstracts/variables' as *;
+
+.desserts {
+  max-width: 1216px;
+  min-height: 100vh;
+  display: flex;
+  align-items: start;
+  margin: 0 auto;
+  padding: 88px 0;
+  gap: 24px;
+
+  @media (max-width: $breakpoint-lg) {
+    flex-direction: column;
+    padding: 40px 0;
+    gap: 32px;
+    align-items: center;
+  }
+}
