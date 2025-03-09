@@ -7,6 +7,7 @@ import {
   ModifyCartProductParams,
   DecraseCartProductQuantityParams,
   IncreaseCartProductQuantityParams,
+  RemoveCartProductParams,
 } from './types';
 import { ProductsContext } from './context';
 import productsData from '../../data/data.json';
@@ -59,10 +60,17 @@ const ProductsProvider = ({ children }: ProductsProviderProps) => {
     setCartProducts(tempCartProducts);
   };
 
+  const removeCartProduct = ({ productUuid }: RemoveCartProductParams) => {
+    const tempCartProducts = { ...cartProducts };
+    delete tempCartProducts[productUuid];
+    setCartProducts(tempCartProducts);
+  };
+
   const contextVal: ProductsContextType = {
     products,
     cartProducts,
     handleCartProductModification,
+    removeCartProduct,
   };
 
   return (

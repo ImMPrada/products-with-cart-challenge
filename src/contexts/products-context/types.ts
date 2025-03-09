@@ -27,6 +27,7 @@ export interface ProductsContextType {
   products: Product[];
   cartProducts: CartProduct;
   handleCartProductModification: (params: ModifyCartProductParams) => void;
+  removeCartProduct: (params: RemoveCartProductParams) => void;
 }
 
 export interface ProductsProviderProps {
@@ -46,4 +47,8 @@ export interface DecraseCartProductQuantityParams {
 export interface IncreaseCartProductQuantityParams {
   product: Product;
   cartItem?: CartItem | undefined;
+}
+
+export interface RemoveCartProductParams {
+  productUuid: string;
 }
