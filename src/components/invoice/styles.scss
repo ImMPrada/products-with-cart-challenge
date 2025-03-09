@@ -1,0 +1,38 @@
+@use '../../styles/design-system/colors' as colors;
+@use '../../styles/design-system/typography' as *;
+@use '../../styles/abstracts/variables' as *;
+
+.invoice {
+  width: 100%;
+  max-width: 385px;
+  padding: 24px;
+  border-radius: 16px;
+  background-color: colors.$white;
+  position: sticky;
+  top: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h2 {
+    color: colors.$red;
+  }
+
+  &__empty-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+
+    p {
+      @include text-preset-4;
+      color: colors.$rose-500;
+    }
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    min-width: 95%;
+  }
+}
