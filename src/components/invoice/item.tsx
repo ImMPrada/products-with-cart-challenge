@@ -12,8 +12,8 @@ const Item = ({ item }: ItemProps) => {
         </p>
         <p className="item__details__price">
           <span className="text--bold">${item.quantity}x</span>
-          <span className="text--regular">@ ${Math.round(item.unitPrice).toFixed(2)}</span>
-          <span className="text--bold">${Math.round(item.quantity * item.unitPrice).toFixed(2)}</span>
+          <span className="text--regular">@ ${(item.unitPrice).toFixed(2)}</span>
+          <span className="text--bold">${(item.quantity * item.unitPrice).toFixed(2)}</span>
         </p>
       </div>
       <button className="item__button">
