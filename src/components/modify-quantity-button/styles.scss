@@ -1,0 +1,53 @@
+@use '../../styles/design-system/colors' as colors;
+@use '../../styles/design-system/typography' as *;
+
+.modify-quantity-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    @include text-preset-4;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    border-radius: 24px;
+    background-color: colors.$red;
+    border: 2px solid colors.$red;
+    color: colors.$white;
+    padding: 12px 17px;
+
+    svg {
+      path {
+        fill: colors.$white;
+      }
+    }
+
+    &__button {
+      border-radius: 50%;
+      border: 1px solid colors.$white;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: colors.$white;
+
+        svg {
+          path {
+            fill: colors.$red;
+          }
+        }
+      }
+    }
+
+    &__quantity {
+      @include text-preset-4;
+      color: colors.$white;
+    }
+  }
+}

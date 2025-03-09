@@ -1,7 +1,7 @@
 import { type ProductCardProps } from './types';
 import './styles.scss';
 import ProductImage from '../product-image';
-import { AddToCartButton } from '../add-to-card-button';
+import { ModifyQuantityButton } from '../modify-quantity-button';
 
 export const ProductCard = ({ image, name, category, price }: ProductCardProps) => {
   return (
@@ -13,7 +13,7 @@ export const ProductCard = ({ image, name, category, price }: ProductCardProps) 
           isThumbnail={false}
         />
 
-        <AddToCartButton />
+        <ModifyQuantityButton />
       </div>
 
       <div className="product-card__content">
