@@ -3,16 +3,26 @@
 
 .add-to-cart-button {
   width: 100%;
+  display: flex;
+  justify-content: center;
 
   &__button {
     @include text-preset-4;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     border-radius: 24px;
     background-color: colors.$white;
-    border: 1px solid colors.$rose-400;
+    border: 2px solid colors.$rose-400;
     color: colors.$rose-900;
     padding: 12px 24px;
 
-    
+    &:hover {
+      border-color: colors.$red;
+      color: colors.$red;
+      transition: all 0.3s ease;
+    }
   }
 }

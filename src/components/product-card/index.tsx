@@ -13,9 +13,7 @@ export const ProductCard = ({ image, name, category, price }: ProductCardProps) 
           isThumbnail={false}
         />
 
-        <AddToCartButton
-          title="Add to Cart"
-        />
+        <AddToCartButton />
       </div>
 
       <div className="product-card__content">
