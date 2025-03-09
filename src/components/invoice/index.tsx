@@ -3,6 +3,7 @@ import './styles.scss';
 import { ProductsContext } from '../../contexts/products-context';
 import { CartProduct } from '../../contexts/products-context/types';
 import EmptyInvoice from './empty-invoice';
+import Item from './item';
 
 const countProducts = (products: CartProduct) => {
   return Object.values(products).reduce((total, product) => total + product.quantity, 0);
@@ -21,6 +22,10 @@ const Invoice = () => {
       <h2 className="text--bold">
         Total Cart ({amount})
       </h2>
+
+      {Object.keys(cartProducts).map((uuid) => (
+        <Item key={uuid} item={cartProducts[uuid]} />
+      ))}
     </div>
   );
 };
