@@ -5,7 +5,11 @@
   max-width: 250px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 36px;
+
+  &__header {
+    position: relative;
+  }
 
   &__content {
     display: flex;
