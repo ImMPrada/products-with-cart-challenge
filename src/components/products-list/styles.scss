@@ -1,0 +1,26 @@
+@use '../../styles/design-system/colors' as colors;
+@use '../../styles/design-system/typography' as *;
+@use '../../styles/abstracts/variables' as *;
+
+.products-list {
+  &__title {
+    color: colors.$rose-900;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__container {
+    display: grid;
+    gap: $spacing-xl $spacing-lg;
+    grid-template-columns: 1fr;
+    
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__title {
+    margin-bottom: $spacing-lg;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+  }
+}
