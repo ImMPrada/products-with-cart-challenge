@@ -1,0 +1,30 @@
+@use '../../styles/design-system/colors' as colors;
+@use '../../styles/design-system/typography' as *;
+
+.product-card {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &__category {
+      color: colors.$rose-500;
+      @include text-preset-4;
+    }
+
+    &__name {
+      color: colors.$rose-900;
+      @include text-preset-3;
+    }
+
+    &__price {
+      color: colors.$red;
+      @include text-preset-3;
+    }
+  }
+}
