@@ -5,9 +5,7 @@ export interface Image {
   desktop: string;
 }
 
-export interface ProductCardProps {
-  image: Image;
+export interface ProductImageProps extends Image {
   name: string;
-  category: string;
-  price: number;
-} 
+  isThumbnail: boolean;
+}

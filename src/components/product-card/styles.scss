@@ -7,19 +7,6 @@
   flex-direction: column;
   gap: 16px;
 
-  &__image {
-    width: 100%;
-    height: 240px;
-    border-radius: 8px;
-
-    img {
-      border-radius: 8px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
   &__content {
     display: flex;
     flex-direction: column;

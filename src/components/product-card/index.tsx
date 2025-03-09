@@ -1,17 +1,18 @@
 import React from 'react';
+
 import { type ProductCardProps } from './types';
 import './styles.scss';
+import ProductImage from '../product-image';
 
 export const ProductCard = ({ image, name, category, price }: ProductCardProps) => {
   return (
     <div className="product-card">
-      <div className="product-card__image">
-        <img 
-          src={image.thumbnail} 
-          alt={name}
-          className="product-card__thumbnail"
-        />
-      </div>
+      <ProductImage
+        {...image}
+        name={name}
+        isThumbnail={false}
+      />
+
       <div className="product-card__content">
         <p className="product-card__content__category">{category}</p>
         <p className="product-card__content__name text--bold">{name}</p>
