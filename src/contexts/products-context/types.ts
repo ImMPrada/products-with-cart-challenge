@@ -15,17 +15,34 @@ export interface Product {
   uuid: string;
 }
 
-export interface CartProduct {
-  uuid: string;
+export interface CartItem {
   quantity: number;
   unitPrice: number;
 }
 
+export type CartProduct = Record<string, CartItem>;
+
 export interface ProductsContextType {
   products: Product[];
-  cartProducts: CartProduct[];
+  cartProducts: CartProduct;
+  handleCartProductModification: (params: ModifyCartProductParams) => void;
 }
 
 export interface ProductsProviderProps {
   children: ReactNode;
 } 
+
+export interface ModifyCartProductParams {
+  product: Product;
+  action: '+' | '-';
+}
+
+export interface DecraseCartProductQuantityParams {
+  productUuid: string;
+  cartItem?: CartItem | undefined;
+}
+
+export interface IncreaseCartProductQuantityParams {
+  product: Product;
+  cartItem?: CartItem | undefined;
+}

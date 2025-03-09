@@ -8,4 +8,5 @@ export interface Image {
 export interface ProductImageProps extends Image {
   name: string;
   isThumbnail: boolean;
+  isInCart: boolean;
 }
