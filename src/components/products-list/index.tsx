@@ -1,5 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { ProductsContext } from '../../contexts/products-context';
+import { ProductCard } from '../product-card';
 
 function ProductsList() {
   const { products } = useContext(ProductsContext);
@@ -12,11 +13,7 @@ function ProductsList() {
     <div className="">
       <h1>Products</h1>
       {products.map((product) => (
-        <div key={product.uuid}>
-          <h2>{product.name}</h2>
-          <img src={product.image.thumbnail} alt={product.name} />
-          <p>{product.price}</p>
-        </div>
+        <ProductCard key={product.uuid} {...product} />
       ))}
     </div>
   )

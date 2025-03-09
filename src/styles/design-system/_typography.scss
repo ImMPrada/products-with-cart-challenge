@@ -20,7 +20,7 @@
 
 @mixin text-preset-3 {
   font-family: $font-family-base;
-  font-size: $font-size-md;
+  font-size: $font-size-base;
   line-height: $line-height-md;
   letter-spacing: $letter-spacing-default;
   font-weight: $font-weight-semibold;
@@ -51,26 +51,18 @@ body {
 
 h1, .h1 {
   @include text-preset-1;
-  margin-bottom: $spacing-lg;
 }
 
 h2, .h2 {
   @include text-preset-2;
-  margin-bottom: $spacing-md;
 }
 
 h3, .h3 {
   @include text-preset-3;
-  margin-bottom: $spacing-sm;
 }
 
 h4, .h4 {
   @include text-preset-4-bold;
-  margin-bottom: $spacing-sm;
-}
-
-p {
-  margin-bottom: $spacing-md;
 }
 
 // Utility Classes
