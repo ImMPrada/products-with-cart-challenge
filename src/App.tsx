@@ -1,13 +1,16 @@
-import { ProductsProvider } from './contexts/products-context';
+import { MediaQueryProvider } from './contexts/media-query-context';
 import ProductsList from './components/products-list';
+import { ProductsProvider } from './contexts/products-context';
 
 function App() {
 
   return (
     <div className="app">
-      <ProductsProvider>
-        <ProductsList />
-      </ProductsProvider>
+      <MediaQueryProvider>
+        <ProductsProvider>
+          <ProductsList />
+        </ProductsProvider>
+      </MediaQueryProvider>
     </div>
   )
 }
