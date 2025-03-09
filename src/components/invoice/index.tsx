@@ -9,6 +9,10 @@ const countProducts = (products: CartProduct) => {
   return Object.values(products).reduce((total, product) => total + product.quantity, 0);
 };
 
+const totalPrice = (products: CartProduct) => {
+  return Object.values(products).reduce((total, product) => total + product.quantity * product.unitPrice, 0);
+};
+
 const Invoice = () => {
   const { cartProducts } = useContext(ProductsContext);
   const amount = countProducts(cartProducts);
@@ -26,6 +30,11 @@ const Invoice = () => {
       {Object.keys(cartProducts).map((uuid) => (
         <Item key={uuid} item={cartProducts[uuid]} />
       ))}
+
+      <div className="invoice__total">
+        <p>Order Total</p>
+        <p className="text--bold">${totalPrice(cartProducts).toFixed(2)}</p>
+      </div>
     </div>
   );
 };

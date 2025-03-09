@@ -32,6 +32,23 @@
     }
   }
 
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-top: 1px solid colors.$rose-100;
+
+    p {
+      @include text-preset-4;
+      color: colors.$rose-900;
+
+      &:last-child {
+        @include text-preset-2;
+      }
+    }
+  }
+
   @media (max-width: $breakpoint-lg) {
     min-width: 95%;
   }
