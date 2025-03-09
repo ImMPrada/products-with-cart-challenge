@@ -53,7 +53,7 @@ const ProductsProvider = ({ children }: ProductsProviderProps) => {
     if (cartItem) {
       tempCartProducts[productUuid] = { ...cartItem, quantity: cartItem.quantity + 1 };
     } else {
-      tempCartProducts[productUuid] = { quantity: 1, unitPrice: product.price };
+      tempCartProducts[productUuid] = { name: product.name, quantity: 1, unitPrice: product.price };
     }
 
     setCartProducts(tempCartProducts);

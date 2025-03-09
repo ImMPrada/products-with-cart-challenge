@@ -34,7 +34,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       </div>
 
       <div className="product-card__content">
-        <p className="product-card__content__category">{category}</p>
+        <p className="product-card__content__category text--bold">{category}</p>
         <p className="product-card__content__name text--bold">{name}</p>
         <p className="product-card__content__price text--bold">${price.toFixed(2)}</p>
       </div>
