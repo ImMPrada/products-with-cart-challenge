@@ -24,7 +24,7 @@ const Body = () => {
   return (
     <>
       {Object.keys(cartProducts).map((uuid) => (
-        <Item key={uuid} item={cartProducts[uuid]} />
+        <Item key={uuid} uuid={uuid} item={cartProducts[uuid]} />
       ))}
 
       <div className="invoice__total">
